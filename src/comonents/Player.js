@@ -13,8 +13,8 @@ class Player extends Component {
         db.collection('player').onSnapshot(snapshot => {
           this.setState({
             itmes: snapshot.docs.map(doc => {
-              console.log(doc.data());
-                return {data: doc.data()};
+              // console.log(doc.data());
+              return {data: doc.data()};
             })
         })
         })
@@ -26,12 +26,12 @@ class Player extends Component {
       <div>
         <h1>Player</h1>
         { itmes && itmes !== undefined ? itmes.map((item) => (
-           <tr id="playerTabele">
-           <td><p id="name">{item.data.playerName}</p></td>
+          <tr id="playerTabele">
+            <td><p id="name">{item.data.playerName}</p></td>
             <td><p id="win">{item.data.gewonnen}</p></td>
             <td><p id="lose">{item.data.verloren}</p></td>
             <td><p id="patt">{item.data.patt}</p></td>
-            </tr>
+          </tr>
         )): null}
       </div>
     );

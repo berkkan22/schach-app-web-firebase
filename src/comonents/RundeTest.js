@@ -13,7 +13,7 @@ componentDidMount(props){
   db.collection('runde ' + this.props.rundeComp).onSnapshot(snapshot => {
     this.setState({
       itmes: snapshot.docs.map(doc => {
-        console.log(doc.data());
+        // console.log(doc.data());
           return {data: doc.data()};
       })
   })
@@ -25,7 +25,7 @@ componentDidMount(props){
 
     return (
       <div>
-        <h1>Runde {this.props.rundeComp}</h1>
+        <h2>Runde {this.props.rundeComp}</h2>
         { itmes && itmes !== undefined ? itmes.map((item) => (
             <p id="gegner">{item.data.firstPlayerName} - {item.data.secondPlayerName}</p>
         )): null}
