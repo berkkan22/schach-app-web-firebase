@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/schach-app-web-firebase/precache-manifest.22c54d0502db3fcc77a9597799bc71f1.js"
+  "/schach-app-web-firebase/precache-manifest.aafee4830a5a4489c1bd77480b3ff2e7.js"
 );
 
 workbox.clientsClaim();
