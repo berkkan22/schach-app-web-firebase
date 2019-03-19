@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import './App.css';
 
 import Title from './comonents/Title'
@@ -14,7 +16,7 @@ class App extends Component {
     size: 0
   }
 
-  componentDidMount(){
+  componentDidMount() {
     db.collection('player').get().then(snap => {
       this.setState({
         size: snap.size
@@ -28,27 +30,37 @@ class App extends Component {
     console.log(this.state.size);
     let runde = []
     // Outer loop to create parent,
-    for (let i = 1; i < this.state.size; i++) {
-      runde.push(<div id="runde"><RoundTest rundeComp={i}/></div>)
+    for (let i = 1; i < this.state.size + 1; i++) {
+      runde.push( < div id = "runde" > < RoundTest rundeComp = {
+          i
+        }
+        /></div > )
     }
     return runde
   }
 
 
   render() {
-    return (
-      <div className="APP">
-        <div id="title">
-          <Title/>
-        </div>
-        <div id="player">
-          <Player/>
-        </div>
+    return ( <
+      div className = "APP" >
+      <
+      div id = "title" >
+      <
+      Title / >
+      <
+      /div> <
+      div id = "player" >
+      <
+      Player / >
+      <
+      /div>
 
-        <div id="runderoot">
-          {this.createRunde()}
-        </div>
-      </div>
+      <
+      div id = "runderoot" > {
+        this.createRunde()
+      } <
+      /div> <
+      /div>
     );
   }
 }
