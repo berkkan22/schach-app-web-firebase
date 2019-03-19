@@ -26,11 +26,11 @@ class Player extends Component {
       <div>
         <h1>Player</h1>
         { itmes && itmes !== undefined ? itmes.map((item) => (
-           <tr>
-           <td id="name">{item.data.playerName}</td>
-            <td id="win">{item.data.gewonnen}</td>
-            <td id="lose">{item.data.verloren}</td>
-            <td id="patt">{item.data.patt}</td>
+           <tr id="playerTabele">
+           <td><p id="name">{item.data.playerName}</p></td>
+            <td><p id="win">{item.data.gewonnen}</p></td>
+            <td><p id="lose">{item.data.verloren}</p></td>
+            <td><p id="patt">{item.data.patt}</p></td>
             </tr>
         )): null}
       </div>

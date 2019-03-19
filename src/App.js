@@ -12,15 +12,15 @@ class App extends Component {
 
   componentDidMount(){
     db.collection('player').get().then(snap => {
-      size = snap.size
-      console.log(size);
+      // size = snap.size
+      // console.log(size);
     })
   }
 
   createRunde = () => {
     let runde = []
     // Outer loop to create parent,
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 12; i++) {
       runde.push(<div id="runde"><RoundTest rundeComp={i}/></div>)
     }
     return runde

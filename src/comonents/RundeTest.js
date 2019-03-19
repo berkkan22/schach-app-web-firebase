@@ -27,7 +27,7 @@ componentDidMount(props){
       <div>
         <h1>Runde {this.props.rundeComp}</h1>
         { itmes && itmes !== undefined ? itmes.map((item) => (
-            <p>{item.data.firstPlayerName} - {item.data.secondPlayerName}</p>
+            <p id="gegner">{item.data.firstPlayerName} - {item.data.secondPlayerName}</p>
         )): null}
       </div>
     );
